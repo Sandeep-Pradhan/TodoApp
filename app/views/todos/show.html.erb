@@ -12,6 +12,11 @@
       <strong>Description:</strong>
       <%= @todo.description %>
     </p>
+
+    <p>
+      <strong>Deadline:</strong>
+      <%= @todo.deadline %>
+    </p>
   </div>
   <%= link_to 'Edit', edit_todo_path(@todo) %> |
   <%= link_to 'Back', todos_path %>
