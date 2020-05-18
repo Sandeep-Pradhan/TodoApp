@@ -1,14 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @todo.title %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @todo.description %>
-</p>
+<div class="container">
+  <div class="jumbotron">
+    <h3>
+      <strong>Title:</strong>
+      <%= @todo.title %>
+    </h3>
 
-<%= link_to 'Edit', edit_todo_path(@todo) %> |
-<%= link_to 'Back', todos_path %>
+    <p>
+      <strong>Description:</strong>
+      <%= @todo.description %>
+    </p>
+  </div>
+  <%= link_to 'Edit', edit_todo_path(@todo) %> |
+  <%= link_to 'Back', todos_path %>
+</div>
+
