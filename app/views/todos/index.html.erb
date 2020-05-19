@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<div class="jumbotron text-center">
+  <h1>Todo App</h1>      
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th class="text-center">Title</th>
+      <th class="text-center">Description</th>
+      <th class="text-center">Priority</th>
+      <th class="text-center">Deadline</th>
+      <th class="text-center" colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todos.each do |todo| %>
+      <tr>
+        <td class="text-center"><%= todo.title %></td>
+        <td class="text-center"><%= todo.description %></td>
+        <td class="text-center"><%= todo.priority %></td>
+        <td class="text-center"><%= todo.deadline %></td>
+        <td class="text-center"><%= link_to 'Show', todo %></td>
+        <td class="text-center"><%= link_to 'Edit', edit_todo_path(todo) %></td>
+        <td class="text-center"><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' }%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Todo', new_todo_path %>
